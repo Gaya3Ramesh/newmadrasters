@@ -38,28 +38,21 @@ nav {
 }
 
 .brand-logo {
-  /* font-size: 32px;
-  font-weight: bold; */
-  /* padding: 0 100px; */
-  line-height: 55px;
+  line-height: 100px;
 }
 
-ul {
+nav ul {
   list-style: none;
   float: right;
-  /* padding-right: 40px; */
-  /* display: flex;
-  align-items: center; */
 }
 
-ul li {
+nav ul li {
   display: inline-block;
   line-height: 75px;
   padding: 0 8px;
 }
 
-ul li a {
-  /* padding: 7px 10px; */
+nav ul li a {
   font-size: 16px;
   color: #9a9a9a;
   text-decoration: none;
@@ -67,10 +60,9 @@ ul li a {
   line-height: 26px;
 }
 
-/* ul li a.active, a:hover{
-    border: 2px solid #fff;
-    transition: 0.5s;
-} */
+nav ul li a.active {
+  color: #e5e5e5;
+}
 
 .hamburger {
   float: right;
@@ -87,7 +79,7 @@ ul li a {
   height: 24px;
 }
 
-nav button,
+.registerBtn,
 .wrap-hero-content button {
   background: linear-gradient(270deg, #2c2c2c 62%, #222222 100%),
     linear-gradient(0deg, #d4d4d4, #d4d4d4);
@@ -98,7 +90,12 @@ nav button,
   margin-left: 30px;
 }
 
-nav button a,
+.registerBtn:hover,
+.wrap-hero-content button:hover {
+  opacity: 0.7;
+}
+
+.registerBtn a,
 .wrap-hero-content button a {
   font-size: 16px;
   font-weight: 500;
@@ -188,81 +185,20 @@ nav button a,
   }
 }
 
-/* @media (max-width: 1040px) {
-  label.logo {
-    font-size: 28px;
-    padding-left: 60px;
-  }
-
-  ul {
-    margin-right: 20px;
-  }
-
-  ul li a {
-    font-size: 14px;
-  }
+.navBgColor {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 1);
+  backdrop-filter: blur(9px);
+  z-index: 100;
+  /* display: fixed; */
 }
-
-@media (max-width: 909px) {
-  .icon {
-    display: block;
-  }
-
-  ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: #2f3640;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-  }
-
-  ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-
-  ul li a {
-    font-size: 20px;
-  }
-
-  ul li a.active,
-  a:hover {
-    border: none;
-    color: #3489db;
-  }
-
-  ul.show {
-    left: 0;
-  }
-} */
 
 /* =========================Hero section================================ */
 
-/* section {
-  z-index: 100;
-} */
-
-/* .header {
-  background-image: url(./images/2triangle.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  z-index: 100;
-} */
 .hero-container {
   margin-top: 130px;
   display: flex;
   justify-content: center;
-  /* margin-top: 12.5rem; */
   margin-bottom: 72px;
-  /* background-image: url(./images/2triangle.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; */
 }
 
 .wrap-hero-content {
@@ -379,7 +315,6 @@ nav button a,
     font-size: 16px;
   }
 }
-
 
 /* =========================SECTION About================================*/
 

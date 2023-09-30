@@ -75,12 +75,11 @@ carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 
-
 // Onscroll header bg change
 const navbar = document.querySelector("nav");
 function changeBg() {
   var scrollValue = window.scrollY;
-  if (scrollValue < 150) {
+  if (scrollValue < 50) {
     navbar.classList.remove("navBgColor");
   } else {
     navbar.classList.add("navBgColor");
@@ -90,38 +89,36 @@ window.addEventListener("scroll", changeBg);
 
 // Sidebar show
 const menu = document.querySelector(".hamburger");
-const ul = document.querySelector(".nav-items ul");
+const ul = document.querySelector("nav ul");
 
 menu.addEventListener("click", function () {
   ul.classList.toggle("show");
 });
 
-
 // on scroll nav change
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("#navbar .nav-items li a");
+const navLinks = document.querySelectorAll(".nav-links a");
+navLinks.forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
 
-window.onscroll = () => {
-  const scrollPosition = window.scrollY;
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
 
-  sections.forEach((sec) => {
-    const offset =
-      sec.offsetTop - document.querySelector("#navbar").offsetHeight;
-    const height = sec.offsetHeight;
-    const id = sec.getAttribute("id");
+    if (targetElement) {
+      const navbarHeight = document.querySelector("#navbar").offsetHeight;
+      const targetOffset = targetElement.offsetTop - navbarHeight;
 
-    if (scrollPosition >= offset && scrollPosition < offset + height) {
+      window.scrollTo({
+        top: targetOffset,
+        behavior: "smooth",
+      });
+
       navLinks.forEach((link) => {
         link.classList.remove("active");
       });
 
-      const correspondingLink = document.querySelector(
-        "#navbar .nav-items li a[href='#" + id + "']"
-      );
-
-      if (correspondingLink) {
-        correspondingLink.classList.add("active");
-      }
+      this.classList.add("active");
     }
   });
-};
+});
