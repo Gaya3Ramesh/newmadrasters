@@ -16,17 +16,10 @@ a {
   text-decoration: none;
 }
 
-.header {
-  background-image: url(./images/2triangle.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  z-index: 100;
-}
-
 header {
   display: flex;
   justify-content: center;
+  top: 0;
   margin-bottom: 130px;
   user-select: none;
 }
@@ -216,11 +209,22 @@ nav button span.arrow-icon {
   z-index: 100;
 } */
 
+/* .header {
+  background-image: url(./images/2triangle.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 100;
+} */
 .hero-container {
   display: flex;
   justify-content: center;
   /* margin-top: 12.5rem; */
   margin-bottom: 72px;
+  background-image: url(./images/2triangle.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .wrap-hero-content {
