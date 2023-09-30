@@ -16,45 +16,50 @@ a {
   text-decoration: none;
 }
 
+.header {
+  background-image: url(./images/2triangle.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 header {
   display: flex;
   justify-content: center;
-  top: 0;
-  margin-bottom: 130px;
-  user-select: none;
 }
 
 nav {
   position: fixed;
-  height: 150px;
+  top: 0;
+  height: 100px;
   padding: 20px;
   width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: #fff;
 }
 
 .brand-logo {
-  width: auto;
+  /* font-size: 32px;
+  font-weight: bold; */
+  /* padding: 0 100px; */
+  line-height: 55px;
 }
 
-.nav-items {
-  display: flex;
-  align-items: center;
-}
-
-nav ul {
-  padding-right: 40px;
-}
-
-nav ul li {
+ul {
   list-style: none;
-  display: inline-block;
-  line-height: 100px;
-  padding: 0 18px;
+  float: right;
+  /* padding-right: 40px; */
+  /* display: flex;
+  align-items: center; */
 }
 
-nav ul li a {
+ul li {
+  display: inline-block;
+  line-height: 75px;
+  padding: 0 8px;
+}
+
+ul li a {
+  /* padding: 7px 10px; */
   font-size: 16px;
   color: #9a9a9a;
   text-decoration: none;
@@ -62,17 +67,25 @@ nav ul li a {
   line-height: 26px;
 }
 
-.nav-items ul li a:hover {
-  color: #e5e5e5;
-}
-
-#navbar .nav-items li a.active {
-  color: #e5e5e5;
-}
-
-/* #navbar .nav-items li a.active section{
-  padding-top: 150px;
+/* ul li a.active, a:hover{
+    border: 2px solid #fff;
+    transition: 0.5s;
 } */
+
+.hamburger {
+  float: right;
+  color: #fff;
+  line-height: 80px;
+  font-size: 30px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+}
 
 nav button,
 .wrap-hero-content button {
@@ -82,6 +95,7 @@ nav button,
   padding: 14px 26px;
   cursor: pointer;
   opacity: 1;
+  margin-left: 30px;
 }
 
 nav button a,
@@ -94,28 +108,6 @@ nav button a,
   text-decoration: none;
   display: flex;
   align-items: center;
-}
-
-nav button:hover,
-.wrap-hero-content button:hover {
-  opacity: 0.7;
-}
-
-.arrowIcon {
-  width: 24px;
-  height: 24px;
-}
-
-nav button span.arrow-icon {
-  padding-left: 10px;
-  font-size: 26px;
-}
-
-.hamburger {
-  color: #dddddd;
-  font-size: 38px;
-  list-style: 100px;
-  display: none;
 }
 
 @media (max-width: 1200px) {
@@ -196,12 +188,57 @@ nav button span.arrow-icon {
   }
 }
 
-.navBgColor {
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(6.5px);
-  z-index: 100;
-  display: fixed;
+/* @media (max-width: 1040px) {
+  label.logo {
+    font-size: 28px;
+    padding-left: 60px;
+  }
+
+  ul {
+    margin-right: 20px;
+  }
+
+  ul li a {
+    font-size: 14px;
+  }
 }
+
+@media (max-width: 909px) {
+  .icon {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #2f3640;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  ul li a {
+    font-size: 20px;
+  }
+
+  ul li a.active,
+  a:hover {
+    border: none;
+    color: #3489db;
+  }
+
+  ul.show {
+    left: 0;
+  }
+} */
 
 /* =========================Hero section================================ */
 
@@ -217,14 +254,15 @@ nav button span.arrow-icon {
   z-index: 100;
 } */
 .hero-container {
+  margin-top: 130px;
   display: flex;
   justify-content: center;
   /* margin-top: 12.5rem; */
   margin-bottom: 72px;
-  background-image: url(./images/2triangle.png);
+  /* background-image: url(./images/2triangle.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: contain; */
 }
 
 .wrap-hero-content {
@@ -307,17 +345,21 @@ nav button span.arrow-icon {
   .wrap-hero-content {
     width: 90%;
   }
+
   .wrap-hero-content .heading {
     font-size: 42px;
     line-height: 64px;
   }
+
   .wrap-hero-content .text {
     font-size: 20px;
   }
+
   .wrap-hero-content .location {
     font-size: 18px;
     margin-bottom: 48px;
   }
+
   .wrap-hero-content button {
     margin-bottom: 40px;
   }
@@ -328,13 +370,16 @@ nav button span.arrow-icon {
     font-size: 32px;
     line-height: 44px;
   }
+
   .wrap-hero-content .text {
     font-size: 18px;
   }
+
   .wrap-hero-content .location {
     font-size: 16px;
   }
 }
+
 
 /* =========================SECTION About================================*/
 
