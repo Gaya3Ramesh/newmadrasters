@@ -77,16 +77,16 @@ wrapper.addEventListener("mouseleave", autoPlay);
 
 
 // Onscroll header bg change
-const navbar = document.querySelector("nav");
-function changeBg() {
-  var scrollValue = window.scrollY;
-  if (scrollValue < 150) {
-    navbar.classList.remove("navBgColor");
-  } else {
-    navbar.classList.add("navBgColor");
-  }
-}
-window.addEventListener("scroll", changeBg);
+// const navbar = document.querySelector("nav");
+// function changeBg() {
+//   var scrollValue = window.scrollY;
+//   if (scrollValue < 150) {
+//     navbar.classList.remove("navBgColor");
+//   } else {
+//     navbar.classList.add("navBgColor");
+//   }
+// }
+// window.addEventListener("scroll", changeBg);
 
 // Sidebar show
 const menu = document.querySelector(".hamburger");
